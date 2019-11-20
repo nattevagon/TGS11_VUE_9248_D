@@ -2,7 +2,7 @@
     <v-container>
             <v-card> 
                 <v-card-title> 
-                    <span class="headline">Login User</span> 
+                    <span class="headline">Login Pengguna</span> 
                 </v-card-title>
                 <div class="form">
                 <v-card-text> 
