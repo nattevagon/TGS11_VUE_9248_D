@@ -1,17 +1,18 @@
 <template> 
-    <v-container> 
+    <v-container>
             <v-card> 
                 <v-card-title> 
                     <span class="headline">Login User</span> 
-                </v-card-title> 
+                </v-card-title>
+                <div class="form">
                 <v-card-text> 
                     <v-container> 
-                        <v-row> 
+                        <v-row>
                             <v-col cols="12"> 
-                                <v-text-field label="Email*" v-model="form.email" required></v-text-field>
+                                <v-text-field label="Email" v-model="form.email"></v-text-field>
                             </v-col>
                             <v-col cols="12"> 
-                                <v-text-field label="Password*" v-model="form.password" type="password" required></v-text-field> 
+                                <v-text-field label="Password" v-model="form.password" type="password"></v-text-field> 
                             </v-col> 
                         </v-row> 
                     </v-container>
@@ -19,8 +20,9 @@
                 </v-card-text> 
                 <v-card-actions> 
                     <v-spacer></v-spacer> 
-                    <v-btn color="blue darken-1" text @click="login()">login</v-btn> 
-                </v-card-actions> 
+                    <v-btn @click="login()" block color="primary" class="elevation-0" height=40>LOGIN</v-btn>
+                </v-card-actions>
+                </div>
             </v-card>
             <v-snackbar 
             v-model="snackbar"
@@ -59,13 +61,12 @@ export default {
             this.$http.post(url,this.user).then(response =>{
                 if(response.data.token){
                     localStorage.setItem("token" , response.data.token)
-                this.$router.push({ name : "UserController"})
+                this.$router.push({ name : "Home"})
                 }else{
                     alert('gagal login')
                 }
             })
         }
     }
-
 }
 </script>

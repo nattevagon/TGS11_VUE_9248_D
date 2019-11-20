@@ -76,9 +76,9 @@ export default {
         return {
             drawer: null,
             items: [
-                { title: 'Landing Page', icon: 'mdi-home', path: 'home' },
-                { title: 'User Controller', icon: 'mdi-human-male', path: 'user' },
-                { title: 'Layanan Kendaraan', icon: 'mdi-tools', path: 'services'},
+                { title: 'Landing Page', icon: 'mdi-home', path: '/home' },
+                { title: 'User Controller', icon: 'mdi-human-male', path: '/user' },
+                { title: 'Layanan Kendaraan', icon: 'mdi-tools', path: '/services'},
             ],
         }
     },
@@ -90,3 +90,4 @@ export default {
             }
         }
 }
+</script>
